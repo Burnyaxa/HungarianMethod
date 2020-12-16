@@ -5,19 +5,19 @@ using namespace std;
 
 int main()
 {
-	int n = 3;
-	int m = 3;
-	//vector<vector<int>> a{
-	//	{-1, -1, -1, -1, -1},
-	//	{-1, 22, 19, 11, 13},
-	//	{-1, 15, 12, 10, 18},
-	//	{-1, 13, 22, 21, 26},
-	//	{-1, 29, 10, 12, 22} };
+	int n = 4;
+	int m = 4;
 	vector<vector<int>> a{
-	{-1, -1, -1, -1},
-	{-1, 1, 2, 3},
-	{-1, 2, 1, 1},
-	{-1, 1, 3, 2} };
+		{-1, -1, -1, -1, -1},
+		{-1, 22, 19, 11, 13},
+		{-1, 15, 12, 10, 18},
+		{-1, 13, 22, 21, 26},
+		{-1, 29, 10, 12, 22} };
+	//vector<vector<int>> a{
+	//{-1, -1, -1, -1},
+	//{-1, 1, 2, 3},
+	//{-1, 2, 1, 1},
+	//{-1, 1, 3, 2} };
 	// a[n + 1][m + 1] - initial matrix
 	// u, v - potential, u contains the most potential value
 	// p - pairs, p[1...m] - row 1...n
@@ -62,8 +62,8 @@ int main()
 		ans[p[j]] = j;
 	}
 	for (int i = 1; i <= n; i++) {
-		cout << ans[i] << endl;
+		cout << "Row: " << i << " Column: " << ans[i] << endl;
 	}
 	int cost = -v[0];
-	cout << cost << endl;
+	cout << "Sum cost: " << cost << endl;
 }
